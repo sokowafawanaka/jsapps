@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="bootstrap.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The alcohol store</title>
+</head>
+<body style="background-color:midnightblue">
+    <main>
+    
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center text-white">Empire Liquor store</h1>
+        </div>
+    </div>
+    <div style="border:20px ; justify-content: center; align-items: center; height: 400px; width: 400px; margin: auto; border-radius: 20px; box-shadow: 10px 10px 5px black;background-image: url(db3292f0-5f6c-4f72-b243-c5592960c8fa.jpg);background-size: cover;backdrop-filter: 100%;">
+        <section style="text-align: center; padding: 20px;">
+    <p id="bill" style="font-size: 20px;" class="text-danger" ><em>Your bill will appear here</em></p>
+    <p id="message" style="font-family: cursive;font-size: large;" class="text-secondary"></p>
+    <button onclick="myBill()" class="bg-success text-white lead" style="margin:250px 40px">Start</button>
+    <button onclick="window.close()" class="bg-danger text-dark lead"style="margin:250px 40px">Exit</button>
+    <section>
+    </div>
+    </div>
+    <script>
+       
+        function myBill(){
+            let a=confirm("Press ok if you want alcohol.")
+            if (a){
+                alert("It's our responsibilty to get you drunk.")
+                let question1=prompt("What do you favour?,1.Hennesy 2.Two Keys 3.J&B 4.Blue Label","type 1,2,3 or 4")
+                if (question1=="1"){
+                    document.getElementById("bill").innerHTML=`$20`
+                    document.getElementById("message").innerHTML=`Thank you for choosing Hennesy`
+                }
+                else if(question1=="2"){
+                    document.getElementById("bill").innerHTML=`$15`
+                    document.getElementById("message").innerHTML=`Thank you for choosing Two Keys`
+                }
+                else if(question1=="3"){
+                    document.getElementById("bill").innerHTML=`$20`
+                    document.getElementById("message").innerHTML=`Thank you for choosing J&B`
+                }
+                else if(question1=="4"){
+                    document.getElementById("bill").innerHTML= `$40`
+                    document.getElementById("message").innerHTML=`Thank you for choosing Castle`
+                }
+            }
+            else{
+                 alert("We hope you start drinking soon")
+            }
+
+        }
+    </script>
+    </main>
+    
+</body>
+</html>
